@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CalculadoraIMC_MALH.MainPage">
+
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="10">
+            <!-- Encabezado con título -->
+            <Frame BackgroundColor="#2196F3" Padding="20" CornerRadius="0">
+                <Label Text="Calculadora de Salud" 
+                       HorizontalTextAlignment="Center" 
+                       TextColor="White" 
+                       FontSize="24"/>
+            </Frame>
+
+            <!-- Sección de IMC -->
+            <Label Text="Datos para IMC:" FontAttributes="Bold" Margin="0,10,0,0"/>
+            <Entry Placeholder="Altura (ej: 1.70)" x:Name="Altura" Keyboard="Numeric"/>
+            <Entry Placeholder="Peso (ej: 70)" x:Name="Peso" Keyboard="Numeric"/>
+            <Entry Placeholder="IMC" x:Name="IMC" IsEnabled="False"/>
+
+            <!-- Sección de Frecuencia Cardíaca -->
+            <Label Text="Datos de Frecuencia Cardíaca:" FontAttributes="Bold" Margin="0,10,0,0"/>
+            <Entry Placeholder="Latidos detectados en 15 segundos" x:Name="Latidos" Keyboard="Numeric"/>
+            <Entry Placeholder="Frecuencia Cardíaca (bpm)" x:Name="FrecuenciaCardiaca" IsEnabled="False"/>
+
+            <!-- Botón de ejecución -->
+            <Button Text="CALCULAR" Clicked="Button_Clicked" Margin="0,15,0,0"/>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
